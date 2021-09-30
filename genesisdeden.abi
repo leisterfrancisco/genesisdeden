@@ -1,0 +1,144 @@
+{
+    "version": "eosio::abi/1.1",
+    "types": [],
+    "structs": [
+        {
+            "name": "addaccount",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "setfulleden",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "setinactive",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "member_v0",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "name": "status",
+                    "type": "uint8"
+                },
+                {
+                    "name": "nft_template_id",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "member_v1",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "name": "status",
+                    "type": "uint8"
+                },
+                {
+                    "name": "nft_template_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "election_participation_status",
+                    "type": "uint8"
+                },
+                {
+                    "name": "election_rank",
+                    "type": "uint8"
+                },
+                {
+                    "name": "representative",
+                    "type": "name"
+                },
+                {
+                    "name": "encryption_key",
+                    "type": "public_key?"
+                }
+            ]
+        },
+        {
+            "name": "member",
+            "base": "",
+            "fields": [
+                {
+                    "name": "value",
+                    "type": "variant<member_v0,member_v1>"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "addaccount",
+            "type": "addaccount",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "setfulleden",
+            "type": "setfulleden",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "setinactive",
+            "type": "setinactive",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "member",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": [],
+            "type": "member"
+        }
+    ],
+    "ricardian_clauses": [],
+    "error_messages": [],
+    "abi_extensions": [],
+    "variants": [
+        {
+            "name": "variant<member_v0,member_v1>",
+            "types": [
+                "member_v0",
+                "member_v1"
+            ]
+        }
+    ]
+}
