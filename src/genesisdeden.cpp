@@ -47,5 +47,5 @@ EOSIO_ACTION_DISPATCHER(eoscostarica::actions)
 
 EOSIO_ABIGEN(
     actions(eoscostarica::actions),
-    table("member"_n, eoscostarica::member)
+    table("member"_n, eoscostarica::member_variant)
 )

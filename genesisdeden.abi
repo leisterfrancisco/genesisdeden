@@ -91,16 +91,6 @@
                     "type": "public_key?"
                 }
             ]
-        },
-        {
-            "name": "member",
-            "base": "",
-            "fields": [
-                {
-                    "name": "value",
-                    "type": "variant<member_v0,member_v1>"
-                }
-            ]
         }
     ],
     "actions": [
@@ -126,7 +116,7 @@
             "index_type": "i64",
             "key_names": [],
             "key_types": [],
-            "type": "member"
+            "type": "variant<member_v0,member_v1>"
         }
     ],
     "ricardian_clauses": [],
